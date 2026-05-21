@@ -7,7 +7,7 @@ Two browser games in one repository.
 | Folder | Game | How to play |
 |--------|------|-------------|
 | [`flappy-ball/`](flappy-ball/) | **Flappy Ball** (Neon Flap) | Press SPACE or tap to fly through pipe gaps |
-| [`bouncing-ball/`](bouncing-ball/) | **Bouncing Ball** | Click/tap to push the ball; pause or reset with buttons |
+| [`bouncing-ball/`](bouncing-ball/) | **Bouncing Ball** | Side-scrolling runner — SPACE/tap to jump over obstacles |
 
 ## Run locally
 

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Neon Flap</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <header class="hud">
+      <h1 class="title">Neon Flap</h1>
+      <div class="scores">
+        <div class="score-panel">
+          <span class="label">Score</span>
+          <span id="score" class="score-value">0</span>
+        </div>
+        <div class="score-panel best">
+          <span class="label">Best</span>
+          <span id="bestScore" class="score-value">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="canvas-container" id="gameArea">
+      <canvas id="gameCanvas" width="400" height="600" aria-label="Neon Flap game"></canvas>
+
+      <div id="startOverlay" class="overlay">
+        <p class="overlay-title">Neon Flap</p>
+        <p class="overlay-hint">Fly the red ball through the gaps</p>
+        <p class="overlay-controls">
+          <kbd>SPACE</kbd> or tap / click to flap
+        </p>
+        <button id="startBtn" class="btn btn-primary" type="button">Start Game</button>
+      </div>
+
+      <div id="gameOverOverlay" class="overlay hidden">
+        <p class="overlay-title game-over-text">GAME OVER</p>
+        <p class="final-score">Score: <span id="finalScore">0</span></p>
+        <p class="final-best">Best: <span id="finalBest">0</span></p>
+        <button id="restartBtn" class="btn btn-primary" type="button">Play Again</button>
+      </div>
+    </div>
+
+    <footer class="controls-hint">
+      <kbd>SPACE</kbd> or click / tap to jump
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-deep: #07070f;
+  --bg-panel: #10101c;
+  --neon-red: #ff3366;
+  --neon-cyan: #00f5ff;
+  --text: #eaeaf2;
+  --text-muted: #7a7a94;
+  --glow-red: 0 0 24px rgba(255, 51, 102, 0.55);
+  --glow-cyan: 0 0 20px rgba(0, 245, 255, 0.4);
+}
+
+html,
+body {
+  min-height: 100%;
+  min-height: 100dvh;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg-deep);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  touch-action: manipulation;
+}
+
+.game-wrapper {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+.hud {
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(1.4rem, 5vw, 1.75rem);
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--neon-red), #ff6688);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 10px rgba(255, 51, 102, 0.35));
+}
+
+.subtitle {
+  margin-top: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.arena-container {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 51, 102, 0.25);
+  box-shadow: var(--glow-red), inset 0 0 30px rgba(0, 0, 0, 0.4);
+  background: var(--bg-panel);
+  cursor: crosshair;
+}
+
+#arena {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 480 / 320;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.btn-primary {
+  color: var(--bg-deep);
+  background: linear-gradient(135deg, var(--neon-cyan), #00b8c8);
+  box-shadow: var(--glow-cyan);
+}
+
+.btn-secondary {
+  color: var(--text);
+  background: transparent;
+  border: 1px solid rgba(255, 51, 102, 0.4);
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.hint {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

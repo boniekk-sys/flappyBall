@@ -2,51 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Neon Flap</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flappyBall — Game Hub</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100dvh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: #07070f;
+      color: #eaeaf2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    main { max-width: 420px; text-align: center; }
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #00f5ff, #b366ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    p { color: #7a7a94; margin-bottom: 2rem; }
+    .games { display: flex; flex-direction: column; gap: 1rem; }
+    a {
+      display: block;
+      padding: 1.25rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.15s ease;
+    }
+    a:hover { transform: scale(1.03); }
+    .flappy {
+      background: linear-gradient(135deg, rgba(0,245,255,0.15), rgba(179,102,255,0.15));
+      border: 1px solid rgba(0, 245, 255, 0.35);
+      color: #00f5ff;
+    }
+    .bounce {
+      background: linear-gradient(135deg, rgba(255,51,102,0.15), rgba(255,100,130,0.1));
+      border: 1px solid rgba(255, 51, 102, 0.35);
+      color: #ff6688;
+    }
+  </style>
 </head>
 <body>
-  <div class="game-wrapper">
-    <header class="hud">
-      <h1 class="title">Neon Flap</h1>
-      <div class="scores">
-        <div class="score-panel">
-          <span class="label">Score</span>
-          <span id="score" class="score-value">0</span>
-        </div>
-        <div class="score-panel best">
-          <span class="label">Best</span>
-          <span id="bestScore" class="score-value">0</span>
-        </div>
-      </div>
-    </header>
-
-    <div class="canvas-container" id="gameArea">
-      <canvas id="gameCanvas" width="400" height="600" aria-label="Neon Flap game"></canvas>
-
-      <div id="startOverlay" class="overlay">
-        <p class="overlay-title">Neon Flap</p>
-        <p class="overlay-hint">Fly the red ball through the gaps</p>
-        <p class="overlay-controls">
-          <kbd>SPACE</kbd> or tap / click to flap
-        </p>
-        <button id="startBtn" class="btn btn-primary" type="button">Start Game</button>
-      </div>
-
-      <div id="gameOverOverlay" class="overlay hidden">
-        <p class="overlay-title game-over-text">GAME OVER</p>
-        <p class="final-score">Score: <span id="finalScore">0</span></p>
-        <p class="final-best">Best: <span id="finalBest">0</span></p>
-        <button id="restartBtn" class="btn btn-primary" type="button">Play Again</button>
-      </div>
-    </div>
-
-    <footer class="controls-hint">
-      <kbd>SPACE</kbd> or click / tap to jump
-    </footer>
-  </div>
-
-  <script src="script.js"></script>
+  <main>
+    <h1>flappyBall</h1>
+    <p>Choose a game to play</p>
+    <nav class="games">
+      <a class="flappy" href="flappy-ball/index.html">Flappy Ball</a>
+      <a class="bounce" href="bouncing-ball/index.html">Bouncing Ball</a>
+    </nav>
+  </main>
 </body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Bouncing Ball</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <header class="hud">
+      <h1 class="title">Bouncing Ball</h1>
+      <p class="subtitle">Click or tap to push the ball</p>
+    </header>
+
+    <div class="arena-container">
+      <canvas id="arena" width="480" height="320" aria-label="Bouncing ball arena"></canvas>
+    </div>
+
+    <div class="controls">
+      <button id="pauseBtn" class="btn btn-primary" type="button">Pause</button>
+      <button id="resetBtn" class="btn btn-secondary" type="button">Reset</button>
+    </div>
+
+    <footer class="hint">
+      Click / tap inside the box to nudge the ball toward that spot
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

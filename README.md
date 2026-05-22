@@ -1,4 +1,4 @@
-# flappyBall
+# GAMES
 
 Three browser games in one repository.
 

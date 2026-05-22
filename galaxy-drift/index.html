@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Galaxy Drift</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <canvas id="gameCanvas" aria-label="Galaxy Drift game"></canvas>
+
+    <div id="startMenu" class="panel menu-panel">
+      <p class="title-glow">GALAXY</p>
+      <h1 class="title-main">DRIFT</h1>
+      <p class="title-sub">Neon arcade drift shooter</p>
+      <p class="menu-hint">Move mouse left / right · Auto-fire lasers</p>
+      <button id="startBtn" class="btn btn-glow" type="button">Launch Mission</button>
+    </div>
+
+    <div id="hud" class="hud hidden">
+      <div class="hud-block score-block">
+        <span class="hud-label">Score</span>
+        <span id="scoreDisplay" class="hud-value">0</span>
+      </div>
+      <div class="hud-block combo-block">
+        <span class="hud-label">Combo</span>
+        <span id="comboDisplay" class="hud-value combo">×1</span>
+      </div>
+      <div class="hud-block wave-block">
+        <span class="hud-label">Wave</span>
+        <span id="waveDisplay" class="hud-value">1</span>
+      </div>
+    </div>
+
+    <div id="eventBanner" class="event-banner hidden"></div>
+
+    <div id="gameOverPanel" class="panel gameover-panel hidden">
+      <p class="go-label">Mission Failed</p>
+      <h2 class="go-title">GAME OVER</h2>
+      <p class="go-score">Score <span id="finalScore">0</span></p>
+      <p class="go-best">Best <span id="bestScore">0</span></p>
+      <button id="restartBtn" class="btn btn-glow" type="button">Drift Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

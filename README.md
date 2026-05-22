@@ -1,6 +1,6 @@
 # flappyBall
 
-Two browser games in one repository.
+Three browser games in one repository.
 
 ## Projects
 
@@ -8,6 +8,7 @@ Two browser games in one repository.
 |--------|------|-------------|
 | [`flappy-ball/`](flappy-ball/) | **Flappy Ball** (Neon Flap) | Press SPACE or tap to fly through pipe gaps |
 | [`bouncing-ball/`](bouncing-ball/) | **Bouncing Ball** | Side-scrolling runner — SPACE/tap to jump over obstacles |
+| [`galaxy-drift/`](galaxy-drift/) | **Galaxy Drift** | Mouse-only neon space shooter — auto lasers, combos, events |
 
 ## Run locally
 
